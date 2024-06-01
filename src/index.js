@@ -1,5 +1,7 @@
 console.log('restaurant');
 import loadPage from "./load-page";
+import { createDish, createDishElement } from "./load-menu";
 
-loadPage();
-
+window.createDish = createDish;
+createDish();
+// createDishElement();
