@@ -27,5 +27,3 @@ function createDish(imgSrc, name, description) {
 }
 
 const potato = createDish("Potato.com", "Potato", "This is the best potato in the world!");
-
-export {createDish, createDishElement};

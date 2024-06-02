@@ -1,6 +1,7 @@
 console.log('restaurant');
 import loadHome from "./load-home";
 import loadMenu from "./load-menu";
+import loadAbout from "./load-about";
 
 loadHome();
 // loadMenu();
