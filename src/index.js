@@ -1,7 +1,17 @@
 console.log('restaurant');
-import loadPage from "./load-page";
-import { createDish, createDishElement } from "./load-menu";
+import loadHome from "./load-home";
+import loadMenu from "./load-menu";
 
-window.createDish = createDish;
-createDish();
-// createDishElement();
+loadHome();
+loadMenu();
+
+function renderPage() {
+    const homeBtn = document.querySelector(".home");
+    const menuBtn = document.querySelector(".menu");
+    const aboutBtn = document.querySelector(".about");
+
+    homeBtn.addEventListener("click", () => {
+
+    })
+}
+

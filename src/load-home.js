@@ -1,7 +1,7 @@
 import restaurantImage from './assets/restaurant-interior.jpg';
 
 
-export default function loadPage() {
+export default function loadHome() {
     const content = document.querySelector('#content');
     const header = document.createElement('h1');
     const pageImg = document.createElement('img');
