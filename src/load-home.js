@@ -7,11 +7,13 @@ export default function loadHome() {
     const pageImg = document.createElement('img');
     const pageText = document.createElement('p');
 
+    pageImg.classList.add('home-image');
+
     header.textContent = "Adiel's Restaurant";
     pageImg.src = restaurantImage;
     pageText.textContent = "In a lovely spot on the bank of 'dodo-lake' lies a homey and lovely restaurant. In our restaurant you can find a lot of special dishes, including the famous 'Adiel's Havita'.";
 
-    content.appendChild(header);
+    // content.appendChild(header);
     content.appendChild(pageImg);
     content.appendChild(pageText);
 }

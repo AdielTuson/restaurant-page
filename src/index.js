@@ -3,7 +3,7 @@ import loadHome from "./load-home";
 import loadMenu from "./load-menu";
 import loadAbout from "./load-about";
 import './styles/main.css';
-import restaurantLogo from './assets/restaurant-logo.png';
+import restaurantLogo from './assets/restaurant-logo.svg';
 
 
 function renderPage() {
