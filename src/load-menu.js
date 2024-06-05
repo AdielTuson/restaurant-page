@@ -8,7 +8,6 @@ function createDishElement(dish) {
     const dishImg = document.createElement('img');
     const dishName = document.createElement('p');
     const dishDescription = document.createElement('p');
-    // const content = document.querySelector('#content');
 
 
     dishImg.src = dish.imgSrc;
@@ -17,7 +16,7 @@ function createDishElement(dish) {
 
     dishElement.append(dishImg, dishName, dishDescription);
 
-    // content.append(dishElement);
+    dishElement.classList.add('dish');
 
     return dishElement;
 }
@@ -26,4 +25,4 @@ function createDish(imgSrc, name, description) {
     return { imgSrc, name, description }
 }
 
-const potato = createDish("Potato.com", "Potato", "This is the best potato in the world!");
+const potato = createDish("Potato.com", "Potato", "This is the best potato in the world! in fact it is so great you will eat 100000. it comes with hdhd owie fdhoeinf oiend. kkk snisnis didnidneeo dind");
