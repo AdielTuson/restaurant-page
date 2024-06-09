@@ -10,9 +10,9 @@ export default function loadHome() {
     const barImg = document.createElement('img');
 
     header.classList.add("home-header");
-    pageImg.classList.add('home-image');
+    pageImg.classList.add('page-image');
     pageText.classList.add('home-text');
-    barImg.classList.add('home-image');
+    barImg.classList.add('page-image');
 
     header.textContent = "Adiel's Restaurant, Where Every Meal is a Masterpiece";
     pageImg.src = restaurantImage;

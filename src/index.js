@@ -8,28 +8,31 @@ import clockIcon from './assets/clock-icon.svg';
 
 
 function renderPage() {
-    const homeBtn = document.querySelector(".home");
-    const menuBtn = document.querySelector(".menu");
-    const aboutBtn = document.querySelector(".about");
+    const homeBtn = document.querySelector("#home-btn");
+    const menuBtn = document.querySelector("#menu-btn");
+    const aboutBtn = document.querySelector("#about-btn");
     const content = document.querySelector("#content");
     
     loadAssets();
     // loadHome();
-    loadMenu();
+    loadAbout();
 
     homeBtn.addEventListener("click", () => {
         content.innerHTML = '';
         loadHome();
+        window.scrollTo(0, 0);
     });
 
     menuBtn.addEventListener("click", () => {
         content.innerHTML = '';
         loadMenu();
+        window.scrollTo(0, 0);
     });
 
     aboutBtn.addEventListener("click", () => {
         content.innerHTML = '';
         loadAbout();
+        window.scrollTo(0, 0);
     });
 }
 renderPage();

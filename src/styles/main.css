@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap');
 
-
 @font-face {
     font-family:'Futura';
     src: url('../assets/fonts/FuturaCyrillicLight.woff') format('woff'),
@@ -103,7 +102,7 @@ body {
     font-style: italic;
 }
 
-.home-image {
+.page-image {
     width: 100%;
     max-height: 100vh;
 }
@@ -161,4 +160,25 @@ body {
     padding-bottom: 2px;
     border-bottom: 1px solid var(--main-bgc);
     font-weight: bold;
+}
+
+
+/* About-us page */
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-header {
+    font-size: clamp(1.4rem, 4.2vw, 1.9rem);
+}
+
+.about-text {
+    padding:3% 20%;
+    margin-bottom: 10px;
+    background-color: #f5f1f120;
+    color: var(--secondary-color);
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    white-space: pre-line;
 }
