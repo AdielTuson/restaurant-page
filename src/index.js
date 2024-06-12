@@ -15,7 +15,7 @@ function renderPage() {
     
     loadAssets();
     // loadHome();
-    loadAbout();
+    loadMenu();
 
     homeBtn.addEventListener("click", () => {
         content.innerHTML = '';
