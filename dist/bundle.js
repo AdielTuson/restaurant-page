@@ -46,6 +46,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@font-face {
 html {
     --main-color: #999A9B;
     --main-bgc: #000;
+    --text-bgc: #f5f1f120;
     --secondary-color: #fff;
     --main-spacing: 15px;
     font-family:'Futura', "Raleway", sans-serif;
@@ -86,15 +87,15 @@ body {
     padding: 5px 10px;
     cursor: pointer;
     background-color: transparent;
-    color: var(--main-color);
-    border: 2px solid var(--main-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
     border-radius: 5px;
     font-weight: bold;
     font-family: 'Raleway';
 }
 
 .nav-menu > button:hover {
-    background-color:var(--main-color);
+    background-color: var(--secondary-color);
     color: var(--main-bgc);
 }
 
@@ -128,17 +129,16 @@ body {
 .home-header {
     font-size: clamp(1.2rem, 4vw, 1.8rem);
     padding: 20px;
-    font-style: italic;
 }
 
-.home-image {
+.page-image {
     width: 100%;
     max-height: 100vh;
 }
 
 .home-text {
     padding: 8% 25%;
-    background-color: #f5f1f120;
+    background-color: var(--text-bgc);
     margin: 40px 0;
     color: var(--secondary-color);
     font-size: clamp(1rem, 1.8vw, 1.2rem);
@@ -152,6 +152,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    /* background-color:var(--text-bgc); */
 }
 
 .menu-header {
@@ -173,6 +174,10 @@ body {
     text-align: left;
     background-color: #ffffffaa;
     color:var(--main-bgc);
+}
+
+.dish:hover {
+    box-shadow: 0 0 6px var(--secondary-color);
 }
 
 .dish > img {
@@ -199,13 +204,46 @@ body {
     gap: 15px;
 }
 
+.about-header {
+    font-size: clamp(1.4rem, 4.2vw, 1.9rem);
+}
+
 .about-text {
     padding:3% 20%;
-    background-color: #f5f1f120;
+    margin-bottom: 10px;
+    background-color: var(--text-bgc);
     color: var(--secondary-color);
     font-size: clamp(1rem, 1.8vw, 1.2rem);
     white-space: pre-line;
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAIA;IACI,oBAAoB;IACpB;0DAC+D;IAC/D,kBAAkB;AACtB;;AAEA;IACI,SAAS;IACT,UAAU;IACV,sBAAsB;AAC1B;;AAEA;IACI,qBAAqB;IACrB,gBAAgB;IAChB,uBAAuB;IACvB,oBAAoB;IACpB,2CAA2C;AAC/C;;AAEA;IACI,WAAW;IACX,iBAAiB;IACjB,eAAe;IACf,iCAAiC;IACjC,wBAAwB;;AAE5B;;AAEA;IACI,gBAAgB;IAChB,MAAM;IACN,OAAO;IACP,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,iCAAiC;IACjC,WAAW;IACX,eAAe;AACnB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,SAAS;AACb;;AAEA;IACI,YAAY;IACZ,iBAAiB;IACjB,eAAe;IACf,6BAA6B;IAC7B,wBAAwB;IACxB,mCAAmC;IACnC,kBAAkB;IAClB,iBAAiB;IACjB,sBAAsB;AAC1B;;AAEA;IACI,kCAAkC;IAClC,sBAAsB;AAC1B;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,SAAS;IACT,aAAa;IACb,kBAAkB;AACtB;;AAEA;IACI,gBAAgB;IAChB,6BAA6B;AACjC;;AAEA;IACI,WAAW;AACf;;;AAGA,cAAc;AACd;IACI,kBAAkB;IAClB,aAAa;IACb,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI,qCAAqC;IACrC,aAAa;IACb,kBAAkB;AACtB;;AAEA;IACI,WAAW;IACX,iBAAiB;AACrB;;AAEA;IACI,eAAe;IACf,2BAA2B;IAC3B,cAAc;IACd,6BAA6B;IAC7B,qCAAqC;IACrC,qBAAqB;AACzB;;;AAGA,SAAS;AACT;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,SAAS;AACb;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,sBAAsB;IACtB,aAAa;IACb,kBAAkB;IAClB,aAAa;IACb,+BAA+B;IAC/B,4BAA4B;IAC5B,YAAY;IACZ,gBAAgB;IAChB,2BAA2B;IAC3B,qBAAqB;AACzB;;AAEA;IACI,aAAa;IACb,iCAAiC;IACjC,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,iBAAiB;IACjB,mCAAmC;AACvC;;AAEA;IACI,mBAAmB;IACnB,wCAAwC;IACxC,iBAAiB;AACrB;;;AAGA,kBAAkB;AAClB;IACI,aAAa;IACb,sBAAsB;IACtB,SAAS;AACb;;AAEA;IACI,cAAc;IACd,2BAA2B;IAC3B,6BAA6B;IAC7B,qCAAqC;IACrC,qBAAqB;AACzB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap');\n\n\n@font-face {\n    font-family:'Futura';\n    src: url('../assets/fonts/FuturaCyrillicLight.woff') format('woff'),\n    url('../assets/fonts/FuturaCyrillicMedium.woff') format('woff');\n    font-style: normal;\n}\n\n* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    --main-color: #999A9B;\n    --main-bgc: #000;\n    --secondary-color: #fff;\n    --main-spacing: 15px;\n    font-family:'Futura', \"Raleway\", sans-serif;\n}\n\nbody {\n    width: 100%;\n    min-height: 100vh;\n    padding: 0 15px;\n    background-color: var(--main-bgc);\n    color: var(--main-color);\n    \n}\n\n.header {\n    position: sticky;\n    top: 0;\n    left: 0;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    background-color: var(--main-bgc);\n    width: 100%;\n    padding: 10px 0;\n}\n\n.logo {\n    width: 130px;\n}\n\n.nav-menu {\n    display: flex;\n    gap: 15px;\n}\n\n.nav-menu > button {\n    width: 100px;\n    padding: 5px 10px;\n    cursor: pointer;\n    background-color: transparent;\n    color: var(--main-color);\n    border: 2px solid var(--main-color);\n    border-radius: 5px;\n    font-weight: bold;\n    font-family: 'Raleway';\n}\n\n.nav-menu > button:hover {\n    background-color:var(--main-color);\n    color: var(--main-bgc);\n}\n\n.bottom {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 15px;\n    padding: 50px;\n    text-align: center;\n}\n\n.bottom > .info {\n    line-height: 1.4;\n    color: var(--secondary-color);\n}\n\n.clock-icon {\n    width: 35px;\n}\n\n\n/* Home page */\n#content {\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n.home-header {\n    font-size: clamp(1.2rem, 4vw, 1.8rem);\n    padding: 20px;\n    font-style: italic;\n}\n\n.home-image {\n    width: 100%;\n    max-height: 100vh;\n}\n\n.home-text {\n    padding: 8% 25%;\n    background-color: #f5f1f120;\n    margin: 40px 0;\n    color: var(--secondary-color);\n    font-size: clamp(1rem, 1.8vw, 1.2rem);\n    white-space: pre-line;\n}\n\n\n/* Menu */\n.menu {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 15px;\n}\n\n.menu-header {\n    font-family: 'Gwendolyn';\n}\n\n.divider {\n    width: 300px;\n}\n\n.dish {\n    width: max(400px, 45%);\n    padding: 10px;\n    border-radius: 8px;\n    display: grid;\n    grid-template-columns: auto 1fr;\n    grid-template-rows: auto 1fr;\n    gap: 2px 8px;\n    text-align: left;\n    background-color: #ffffffaa;\n    color:var(--main-bgc);\n}\n\n.dish > img {\n    grid-row: 1/3;\n    border: 2px solid var(--main-bgc);\n    width: 110px;\n    height: 110px;\n    align-self: center;\n    object-fit: cover;\n    box-shadow: 0 0 3px var(--main-bgc);\n}\n\n.dish > p:first-of-type {\n    padding-bottom: 2px;\n    border-bottom: 1px solid var(--main-bgc);\n    font-weight: bold;\n}\n\n\n/* About-us page */\n.about {\n    display: flex;\n    flex-direction: column;\n    gap: 15px;\n}\n\n.about-text {\n    padding:3% 20%;\n    background-color: #f5f1f120;\n    color: var(--secondary-color);\n    font-size: clamp(1rem, 1.8vw, 1.2rem);\n    white-space: pre-line;\n}"],"sourceRoot":""}]);
+}
+
+
+@media (max-width:500px) {
+    .body {
+        font-size: calc(80%);
+    }
+
+    .nav-menu > button {
+        width:65px;
+        font-size: calc(75%);
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    .home-text, .about-text {
+        padding: 10px;
+    }
+
+    .dish {
+        width: 90%;
+    }
+
+    .divider {
+        width: 200px;
+    }
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAGA;IACI,oBAAoB;IACpB;0DAC+D;IAC/D,kBAAkB;AACtB;;AAEA;IACI,SAAS;IACT,UAAU;IACV,sBAAsB;AAC1B;;AAEA;IACI,qBAAqB;IACrB,gBAAgB;IAChB,qBAAqB;IACrB,uBAAuB;IACvB,oBAAoB;IACpB,2CAA2C;AAC/C;;AAEA;IACI,WAAW;IACX,iBAAiB;IACjB,eAAe;IACf,iCAAiC;IACjC,wBAAwB;;AAE5B;;AAEA;IACI,gBAAgB;IAChB,MAAM;IACN,OAAO;IACP,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,iCAAiC;IACjC,WAAW;IACX,eAAe;AACnB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,SAAS;AACb;;AAEA;IACI,YAAY;IACZ,iBAAiB;IACjB,eAAe;IACf,6BAA6B;IAC7B,6BAA6B;IAC7B,wCAAwC;IACxC,kBAAkB;IAClB,iBAAiB;IACjB,sBAAsB;AAC1B;;AAEA;IACI,wCAAwC;IACxC,sBAAsB;AAC1B;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,SAAS;IACT,aAAa;IACb,kBAAkB;AACtB;;AAEA;IACI,gBAAgB;IAChB,6BAA6B;AACjC;;AAEA;IACI,WAAW;AACf;;;AAGA,cAAc;AACd;IACI,kBAAkB;IAClB,aAAa;IACb,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI,qCAAqC;IACrC,aAAa;AACjB;;AAEA;IACI,WAAW;IACX,iBAAiB;AACrB;;AAEA;IACI,eAAe;IACf,iCAAiC;IACjC,cAAc;IACd,6BAA6B;IAC7B,qCAAqC;IACrC,qBAAqB;AACzB;;;AAGA,SAAS;AACT;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,SAAS;IACT,sCAAsC;AAC1C;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,sBAAsB;IACtB,aAAa;IACb,kBAAkB;IAClB,aAAa;IACb,+BAA+B;IAC/B,4BAA4B;IAC5B,YAAY;IACZ,gBAAgB;IAChB,2BAA2B;IAC3B,qBAAqB;AACzB;;AAEA;IACI,0CAA0C;AAC9C;;AAEA;IACI,aAAa;IACb,iCAAiC;IACjC,YAAY;IACZ,aAAa;IACb,kBAAkB;IAClB,iBAAiB;IACjB,mCAAmC;AACvC;;AAEA;IACI,mBAAmB;IACnB,wCAAwC;IACxC,iBAAiB;AACrB;;;AAGA,kBAAkB;AAClB;IACI,aAAa;IACb,sBAAsB;IACtB,SAAS;AACb;;AAEA;IACI,uCAAuC;AAC3C;;AAEA;IACI,cAAc;IACd,mBAAmB;IACnB,iCAAiC;IACjC,6BAA6B;IAC7B,qCAAqC;IACrC,qBAAqB;AACzB;;;AAGA;IACI;QACI,oBAAoB;IACxB;;IAEA;QACI,UAAU;QACV,oBAAoB;IACxB;;IAEA;QACI,UAAU;IACd;;IAEA;QACI,aAAa;IACjB;;IAEA;QACI,UAAU;IACd;;IAEA;QACI,YAAY;IAChB;AACJ","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap');\n\n@font-face {\n    font-family:'Futura';\n    src: url('../assets/fonts/FuturaCyrillicLight.woff') format('woff'),\n    url('../assets/fonts/FuturaCyrillicMedium.woff') format('woff');\n    font-style: normal;\n}\n\n* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    --main-color: #999A9B;\n    --main-bgc: #000;\n    --text-bgc: #f5f1f120;\n    --secondary-color: #fff;\n    --main-spacing: 15px;\n    font-family:'Futura', \"Raleway\", sans-serif;\n}\n\nbody {\n    width: 100%;\n    min-height: 100vh;\n    padding: 0 15px;\n    background-color: var(--main-bgc);\n    color: var(--main-color);\n    \n}\n\n.header {\n    position: sticky;\n    top: 0;\n    left: 0;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    background-color: var(--main-bgc);\n    width: 100%;\n    padding: 10px 0;\n}\n\n.logo {\n    width: 130px;\n}\n\n.nav-menu {\n    display: flex;\n    gap: 15px;\n}\n\n.nav-menu > button {\n    width: 100px;\n    padding: 5px 10px;\n    cursor: pointer;\n    background-color: transparent;\n    color: var(--secondary-color);\n    border: 2px solid var(--secondary-color);\n    border-radius: 5px;\n    font-weight: bold;\n    font-family: 'Raleway';\n}\n\n.nav-menu > button:hover {\n    background-color: var(--secondary-color);\n    color: var(--main-bgc);\n}\n\n.bottom {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 15px;\n    padding: 50px;\n    text-align: center;\n}\n\n.bottom > .info {\n    line-height: 1.4;\n    color: var(--secondary-color);\n}\n\n.clock-icon {\n    width: 35px;\n}\n\n\n/* Home page */\n#content {\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n.home-header {\n    font-size: clamp(1.2rem, 4vw, 1.8rem);\n    padding: 20px;\n}\n\n.page-image {\n    width: 100%;\n    max-height: 100vh;\n}\n\n.home-text {\n    padding: 8% 25%;\n    background-color: var(--text-bgc);\n    margin: 40px 0;\n    color: var(--secondary-color);\n    font-size: clamp(1rem, 1.8vw, 1.2rem);\n    white-space: pre-line;\n}\n\n\n/* Menu */\n.menu {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 15px;\n    /* background-color:var(--text-bgc); */\n}\n\n.menu-header {\n    font-family: 'Gwendolyn';\n}\n\n.divider {\n    width: 300px;\n}\n\n.dish {\n    width: max(400px, 45%);\n    padding: 10px;\n    border-radius: 8px;\n    display: grid;\n    grid-template-columns: auto 1fr;\n    grid-template-rows: auto 1fr;\n    gap: 2px 8px;\n    text-align: left;\n    background-color: #ffffffaa;\n    color:var(--main-bgc);\n}\n\n.dish:hover {\n    box-shadow: 0 0 6px var(--secondary-color);\n}\n\n.dish > img {\n    grid-row: 1/3;\n    border: 2px solid var(--main-bgc);\n    width: 110px;\n    height: 110px;\n    align-self: center;\n    object-fit: cover;\n    box-shadow: 0 0 3px var(--main-bgc);\n}\n\n.dish > p:first-of-type {\n    padding-bottom: 2px;\n    border-bottom: 1px solid var(--main-bgc);\n    font-weight: bold;\n}\n\n\n/* About-us page */\n.about {\n    display: flex;\n    flex-direction: column;\n    gap: 15px;\n}\n\n.about-header {\n    font-size: clamp(1.4rem, 4.2vw, 1.9rem);\n}\n\n.about-text {\n    padding:3% 20%;\n    margin-bottom: 10px;\n    background-color: var(--text-bgc);\n    color: var(--secondary-color);\n    font-size: clamp(1rem, 1.8vw, 1.2rem);\n    white-space: pre-line;\n}\n\n\n@media (max-width:500px) {\n    .body {\n        font-size: calc(80%);\n    }\n\n    .nav-menu > button {\n        width:65px;\n        font-size: calc(75%);\n    }\n\n    .logo {\n        width: 20%;\n    }\n\n    .home-text, .about-text {\n        padding: 10px;\n    }\n\n    .dish {\n        width: 90%;\n    }\n\n    .divider {\n        width: 200px;\n    }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -715,6 +753,7 @@ function loadAbout() {
 function createHeader() {
     const headerElement = document.createElement('h1');
     headerElement.textContent = "About Us";
+    headerElement.classList.add('about-header')
 
     return headerElement;
 }
@@ -730,7 +769,7 @@ function createInfo() {
 function createImg() {
     const imgElement = document.createElement('img');
     imgElement.src = _assets_set_table_wine_jpg__WEBPACK_IMPORTED_MODULE_0__;
-    imgElement.classList.add('home-image');
+    imgElement.classList.add('page-image');
 
     return imgElement;
 }
@@ -763,9 +802,9 @@ function loadHome() {
     const barImg = document.createElement('img');
 
     header.classList.add("home-header");
-    pageImg.classList.add('home-image');
+    pageImg.classList.add('page-image');
     pageText.classList.add('home-text');
-    barImg.classList.add('home-image');
+    barImg.classList.add('page-image');
 
     header.textContent = "Adiel's Restaurant, Where Every Meal is a Masterpiece";
     pageImg.src = _assets_restaurant_interior_jpg__WEBPACK_IMPORTED_MODULE_0__;
@@ -797,6 +836,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_potato_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/potato.jpg */ "./src/assets/potato.jpg");
 /* harmony import */ var _assets_sushi_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/sushi.jpg */ "./src/assets/sushi.jpg");
 /* harmony import */ var _assets_menu_divider_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/menu-divider.png */ "./src/assets/menu-divider.png");
+/* harmony import */ var _assets_empanada_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/empanada.jpg */ "./src/assets/empanada.jpg");
+/* harmony import */ var _assets_asado_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/asado.jpg */ "./src/assets/asado.jpg");
+/* harmony import */ var _assets_moltenChocolateCake_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/moltenChocolateCake.jpg */ "./src/assets/moltenChocolateCake.jpg");
+/* harmony import */ var _assets_cremeBrulee_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/cremeBrulee.jpg */ "./src/assets/cremeBrulee.jpg");
+
+
+
+
+
+
+
 
 
 
@@ -814,9 +864,13 @@ function loadMenu() {
         createMenuDivider(),
         createDishElement(potato), 
         createDishElement(steak),
+        createDishElement(empanada),
+        createDishElement(asado),
         createDishElement(hamburger),
         createDishElement(salmon),
         createDishElement(sushi),
+        createDishElement(moltenChocolateCake),
+        createDishElement(cremeBrulee),
         createMenuDivider(),
     );
     content.appendChild(menu);
@@ -869,7 +923,23 @@ const salmon = createDish(_assets_salmon_jpg__WEBPACK_IMPORTED_MODULE_2__, "Gril
 
 const sushi = createDish(_assets_sushi_jpg__WEBPACK_IMPORTED_MODULE_4__, "Sushi Tray", "A beautifully arranged selection of fresh, high-quality sushi, including nigiri, sashimi, and rolls. Perfectly balanced flavors and textures, crafted to delight sushi enthusiasts.");
 
+const empanada = createDish(_assets_empanada_jpg__WEBPACK_IMPORTED_MODULE_6__, "Empanada", "Golden and flaky pastry filled with savory ingredients. Our Empanadas are handcrafted with a variety of fillings, offering a delightful burst of flavor in every bite.");
 
+const asado = createDish(_assets_asado_jpg__WEBPACK_IMPORTED_MODULE_7__, "Asado", "A traditional Argentine barbecue featuring a selection of perfectly grilled meats. Our Asado is a carnivore's delight, served with chimichurri sauce and a side of fresh salad.");
+
+const moltenChocolateCake = createDish(_assets_moltenChocolateCake_jpg__WEBPACK_IMPORTED_MODULE_8__, "Molten Chocolate Cake", "A decadent dessert with a gooey, molten center. Our Molten Chocolate Cake is served warm with a scoop of vanilla ice cream, making it the perfect sweet ending to your meal.");
+
+const cremeBrulee = createDish(_assets_cremeBrulee_jpg__WEBPACK_IMPORTED_MODULE_9__, "Creme Brulee", "A classic French dessert with a rich, creamy custard base topped with a contrasting layer of hard caramel. Our Crème Brûlée is elegantly finished with a sprinkle of fresh berries.");
+
+/***/ }),
+
+/***/ "./src/assets/asado.jpg":
+/*!******************************!*\
+  !*** ./src/assets/asado.jpg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "asado.jpg";
 
 /***/ }),
 
@@ -890,6 +960,26 @@ module.exports = __webpack_require__.p + "bar.jpg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "clock-icon.svg";
+
+/***/ }),
+
+/***/ "./src/assets/cremeBrulee.jpg":
+/*!************************************!*\
+  !*** ./src/assets/cremeBrulee.jpg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "cremeBrulee.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/empanada.jpg":
+/*!*********************************!*\
+  !*** ./src/assets/empanada.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "empanada.jpg";
 
 /***/ }),
 
@@ -930,6 +1020,16 @@ module.exports = __webpack_require__.p + "hamburger.jpg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "menu-divider.png";
+
+/***/ }),
+
+/***/ "./src/assets/moltenChocolateCake.jpg":
+/*!********************************************!*\
+  !*** ./src/assets/moltenChocolateCake.jpg ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "moltenChocolateCake.jpg";
 
 /***/ }),
 
@@ -1163,14 +1263,13 @@ console.log('restaurant');
 
 
 function renderPage() {
-    const homeBtn = document.querySelector(".home");
-    const menuBtn = document.querySelector(".menu");
-    const aboutBtn = document.querySelector(".about");
+    const homeBtn = document.querySelector("#home-btn");
+    const menuBtn = document.querySelector("#menu-btn");
+    const aboutBtn = document.querySelector("#about-btn");
     const content = document.querySelector("#content");
     
     loadAssets();
-    // loadHome();
-    (0,_load_about__WEBPACK_IMPORTED_MODULE_2__["default"])();
+    (0,_load_home__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
     homeBtn.addEventListener("click", () => {
         content.innerHTML = '';
