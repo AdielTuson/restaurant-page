@@ -14,8 +14,7 @@ function renderPage() {
     const content = document.querySelector("#content");
     
     loadAssets();
-    // loadHome();
-    loadMenu();
+    loadHome();
 
     homeBtn.addEventListener("click", () => {
         content.innerHTML = '';
