@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+
 
 module.exports = {
     entry: './src/index.js',
@@ -15,10 +14,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader'],
-            },
-            {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
             },
@@ -31,11 +26,7 @@ module.exports = {
             },
         ],
     },
-    optimization: {
-        minimizer: [
-            new CssMinimizerPlugin(),
-        ],
-    },
+
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
@@ -43,7 +34,5 @@ module.exports = {
             inject: 'head',
             scriptLoading: 'defer',
         }),
-        new MiniCssExtractPlugin(),
     ],
-    
 };
