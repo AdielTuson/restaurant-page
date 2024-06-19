@@ -1,4 +1,3 @@
-console.log('restaurant');
 import loadHome from "./load-home";
 import loadMenu from "./load-menu";
 import loadAbout from "./load-about";
@@ -6,6 +5,11 @@ import './styles/main.css';
 import restaurantLogo from './assets/restaurant-logo.svg';
 import clockIcon from './assets/clock-icon.svg';
 
+if (process.env.NODE_ENV !== 'production') {
+    console.log('Looks like we are in development mode!');
+};
+
+console.log('bob');
 
 function renderPage() {
     const homeBtn = document.querySelector("#home-btn");
